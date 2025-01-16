@@ -1,24 +1,12 @@
 public class test {
-    public static void main(String[] args) {
-        Piece pawn1 = new Piece("Knight", 'b');
-        pawn1.move();
-    }
-}
-class Piece{
-    String type;
-    char color;
-
-    public Piece(String type, char color){
-        this.type = type;
-        this.color = color;
-    }
-
-    public void move(){
-        if (this.type == "Pawn"){
-            System.out.println("Move forward one space");
-        } else if (this.type == "Knight") {
-            System.out.println("Move two spaces one direction, one space a different direction");
+    public static void main(String[] args){
+        for (int i = 0; i< args.length; ++i){   //for loop
+            System.out.println(args[i]);    //System is a class native to Java. out is a class variable of System, and the object out has several methods including pringln()
+        }
+        for (String value : args){  //for each loop
+            System.out.println(value);
         }
 
+        Integer anInt = 9;
     }
 }
