@@ -28,7 +28,6 @@ public class ChessBoard {
     public void addPiece(ChessPosition position, ChessPiece piece) {
         position.piece = piece;
 
-        throw new RuntimeException("Not implemented");
     }
 
     /**
@@ -39,7 +38,7 @@ public class ChessBoard {
      * position
      */
     public ChessPiece getPiece(ChessPosition position) {
-        throw new RuntimeException("Not implemented");
+        return position.piece;
     }
 
     /**
@@ -47,6 +46,12 @@ public class ChessBoard {
      * (How the game of chess normally starts)
      */
     public void resetBoard() {
+        //remove all current pieces from board
+        for(int row = 0; row < 8; row+=1){
+            for(int column = 0; column <8; column +=1){
+                board[row][column].piece = null;}
+        }
+
         //set up black in rows 0 and 1
         //pawns first
         for (int counter = 0; counter < 8; counter += 1) {
@@ -93,6 +98,11 @@ public class ChessBoard {
         }
         return str;
     }
+    @Override
+    public int hashCode(){//DEBUG I have no idea what this one is supposed to be doing so for now it returns 1
+        return 1;
+    }
+
 
         //DEBUG main method for testing purposes
     public static void main(String[] args){
