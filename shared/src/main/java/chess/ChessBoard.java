@@ -102,7 +102,22 @@ public class ChessBoard {
     public int hashCode(){//DEBUG I have no idea what this one is supposed to be doing so for now it returns 1
         return 1;
     }
-
+    @Override
+    public boolean equals(Object obj){
+        if(obj.getClass() != this.getClass()){
+            return false;
+        }
+        else{
+            for(int row = 0; row < 8; row+=1){
+                for(int column = 0; column <8; column +=1){
+                    if(!this.board[row][column].equals(((ChessBoard)obj).board[row][column])){
+                        return false;
+                    }
+                }
+            }
+        }
+        return true;
+    }
 
         //DEBUG main method for testing purposes
     public static void main(String[] args){
