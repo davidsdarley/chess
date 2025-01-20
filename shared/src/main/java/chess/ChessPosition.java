@@ -34,23 +34,23 @@ public class ChessPosition {
     @Override
     public String toString(){
         if(this.piece == null){
-            return "| |";
+            return " |";
         }
         else if(piece.type == KING){
-            return String.format("|K|");
+            return String.format("K|");
         }
         else if(piece.type == QUEEN) {
-            return String.format("|Q|");
+            return String.format("Q|");
         }
         else if(piece.type == BISHOP) {
-            return String.format("|B|");
+            return String.format("B|");
         }
         else if(piece.type == KNIGHT){
-                return String.format("|k|");}
+                return String.format("k|");}
         else if(piece.type == ROOK){
-            return String.format("|R|");}
+            return String.format("R|");}
         else{
-            return String.format("|P|");
+            return String.format("P|");
         }
         //return String.format("Square (%d, %d)",this.row, this.col);
     }
@@ -64,7 +64,7 @@ public class ChessPosition {
         if (obj.getClass() != this.getClass()){
             return false;
         }
-        if((((ChessPosition) obj).getColumn() == this.col) && (((ChessPosition)obj).getRow() == this.row)){
+        if((((ChessPosition) obj).hashCode() == this.hashCode())){
             return true;
         }
         return false;

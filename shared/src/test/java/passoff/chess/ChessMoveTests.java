@@ -32,9 +32,13 @@ public class ChessMoveTests {
     @DisplayName("Equals Testing")
     public void equalsTest() {
         Assertions.assertEquals(original, equal, "equals returned false for equal moves");
+        System.out.println("\nFIRST TEST PASSED\n");
         Assertions.assertNotEquals(original, startDifferent, "equals returned true for different moves");
+        System.out.println("\nSECOND TEST PASSED\n");
         Assertions.assertNotEquals(original, endDifferent, "equals returned true for different moves");
+        System.out.println("\nTHIRD TEST PASSED\n");
         Assertions.assertNotEquals(original, promoteDifferent, "equals returned true for different moves");
+        System.out.println("\nFOURTH TEST PASSED\n");
     }
 
     @Test
