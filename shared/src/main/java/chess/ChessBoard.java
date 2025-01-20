@@ -148,7 +148,7 @@ public class ChessBoard {
         ChessBoard tester = new ChessBoard();
         System.out.println(tester);
         ChessPiece pawn1 = tester.board[2][2].piece;
-        pawn1.pieceMoves();
+        //pawn1.pieceMoves();
 
     }
 
